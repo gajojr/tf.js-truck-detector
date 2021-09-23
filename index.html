@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <label style="margin: 10px;">
+        Upload the image:
+        <input type="file" accept=".jpg, .png, .jfif" id="imgupload">
+      </label>
+        <img id="img" alt="uploaded file" style="display: none;">
+        <button style="margin: 10px;" id="check-if-truck">Check if this is a truck</button>
+    </main>
+    <!-- Load TensorFlow.js. This is required to use MobileNet. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1">
+    </script>
+    <!-- Load the MobileNet model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0">
+    </script>
+    <script src="./src/index.js"></script>
+</body>
+
+</html>
